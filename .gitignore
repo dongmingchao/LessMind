@@ -1,3 +1,7 @@
 node_modules/
 package-lock.json
 .idea/
+platforms/android/app/build/
+platforms/android/.gradle
+platforms/android/CordovaLib/build/
+.DS_Store

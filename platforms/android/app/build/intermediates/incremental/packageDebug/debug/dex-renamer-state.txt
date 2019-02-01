@@ -1,4 +1,0 @@
-#Sun Jan 06 18:25:24 CST 2019
-base.0=D\:\\Documents\\MutiPlatform_Projects\\todo\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-path.0=classes.dex
-renamed.0=classes.dex
