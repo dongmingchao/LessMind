@@ -4,4 +4,5 @@ package-lock.json
 platforms/android/app/build/
 platforms/android/.gradle
 platforms/android/CordovaLib/build/
+platforms/android/app/src/main/assets/www/
 .DS_Store
