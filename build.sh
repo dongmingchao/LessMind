@@ -16,4 +16,4 @@ echo "key.alias=${APP_ALIAS}" >> $androidHome/release-signing.properties
 echo "key.store.password=${APP_PASSWORD}" >> $androidHome/release-signing.properties
 echo "key.alias.password=${APP_PASSWORD}" >> $androidHome/release-signing.properties
 
-cordova build -release
+npx cordova build -release
