@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.lanshan.todo;
+package com.qialanshan.todo;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

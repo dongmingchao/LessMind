@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "node"
+script: bash ./build.sh
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: releases
+  api_key: ${GH_TOKEN}
+  file: app/build/outputs/apk/release/app-release.apk
+  skip_cleanup: true

@@ -6,3 +6,5 @@ platforms/android/.gradle
 platforms/android/CordovaLib/build/
 platforms/android/app/src/main/assets/www/
 .DS_Store
+www/dist
+platforms/android/release-signing.properties
