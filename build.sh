@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 srcdir=$PWD/src
 workspace=$PWD
-androidHome=$PWD/plantforms/android
+androidHome=$PWD/platforms/android
 
 cd $srcdir
 npm i
