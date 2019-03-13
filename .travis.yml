@@ -28,10 +28,6 @@ script:
     - npm --version
     - bash ./build.sh
 
-branches:
-  only:
-    - master
-
 deploy:
   provider: releases
   api_key: ${GH_TOKEN}
