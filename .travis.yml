@@ -37,3 +37,5 @@ deploy:
   api_key: ${GH_TOKEN}
   file: platforms/android/app/build/outputs/apk/release/app-release.apk
   skip_cleanup: true
+  on:
+    tags: true
