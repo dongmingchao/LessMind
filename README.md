@@ -23,3 +23,8 @@
 - [x] Android(6+)
 - [ ] IOS
 - [ ] Win Mac Linux
+
+## Some temporary things
+
+- [ ] Need an icon QAQ
+- [ ] Need bug report system
