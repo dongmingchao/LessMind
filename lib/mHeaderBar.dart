@@ -1,13 +1,38 @@
 import 'package:flutter/material.dart';
 
-class MHeaderBar extends StatelessWidget {
+class MHeaderBar extends StatefulWidget {
+  @override
+  _MHeaderBarState createState() => _MHeaderBarState();
+}
+
+class _MHeaderBarState extends State<MHeaderBar> {
+  Widget drawerIcon = Container();
+
   @override
   Widget build(BuildContext context) {
+    if (MediaQuery
+        .of(context)
+        .size
+        .width < 800) {
+      setState(() {
+        drawerIcon = IconButton(
+            icon: Icon(Icons.menu),
+            color: Colors.white,
+            onPressed: Scaffold
+                .of(context)
+                .openDrawer);
+      });
+    } else {
+      setState(() {
+        drawerIcon = Container();
+      });
+    }
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Container(
-          height: 200,
+          height: 210,
           color: Colors.blueAccent,
           child: Stack(
             fit: StackFit.expand,
@@ -26,22 +51,18 @@ class MHeaderBar extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned.fill(
-                top: 22,
+              Container(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.fromLTRB(30, 10, 0, 0),
-                      child: IconButton(
-                          icon: Icon(Icons.menu),
-                          color: Colors.white,
-                          onPressed: Scaffold.of(context).openDrawer),
-                    ),
+                        margin: EdgeInsets.fromLTRB(30, 10, 0, 0),
+                        child: drawerIcon),
                     Container(
                       margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
                       child: Text(
-                        '标题',
+                        'Title',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
@@ -90,5 +111,13 @@ class MHeaderBar extends StatelessWidget {
         LinearProgressIndicator(),
       ],
     );
+  }
+
+  @override
+  void didUpdateWidget(MHeaderBar oldWidget) {
+    print('update' + MediaQuery
+        .of(context)
+        .size
+        .toString());
   }
 }
